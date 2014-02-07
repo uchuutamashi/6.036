@@ -5,11 +5,12 @@
 int main(int argc, char **argv)
 {
 	Perceptron _p {2};
-	
+
 	std::ifstream traindata;
 	traindata.open(argv[1]);
-	
-	_p.Train( traindata , true );	
-		
+
+	_p.Train( traindata , true );
+
+	traindata.close();
 	return 0;
 }
