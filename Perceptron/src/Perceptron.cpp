@@ -40,7 +40,7 @@ void Perceptron::Train( std::ifstream& data , bool verbose /* = false */ )
 
 	data >> N; // read number of points
 	for( size_t i=0; i < N; ++i ) {
-		x.push_back(std::vector<double> {0.0,_insize});
+		x.push_back(std::vector<double> (_insize, 0.0));
 		for( size_t j=0; j < _insize; ++j ) {
 			data >> x[i][j];
 			if(verbose) std::cout << x[i][j] << " ";

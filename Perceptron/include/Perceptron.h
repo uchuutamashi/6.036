@@ -10,7 +10,7 @@ class Perceptron
 	size_t _insize;
 	std::vector<double> _theta;
 public:
-	Perceptron( const size_t input_size ) : _insize { input_size }, _theta { } { for(size_t i=0; i<_insize; ++i) _theta.push_back(0); };
+	Perceptron( const size_t input_size ) : _insize { input_size }, _theta { std::vector<double>(_insize, 0.0) } { };
 	Perceptron( const size_t input_size, const std::vector<double> theta0 ) : _insize { input_size }, _theta { theta0 } {};
 	~Perceptron() {};
 	inline std::vector<double> theta() const {
